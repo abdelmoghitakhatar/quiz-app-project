@@ -1,0 +1,25 @@
+<!-- <div *ngIf="question!=null; else showLoveYou" class="question-box">
+    <h3>Question {{i+1}}/{{totalQuestions}}</h3>
+    <h3>{{question.question}}</h3>
+    <div class="options" *ngFor="let option of question.options">
+      <input
+        type="radio"
+        name="options"
+        id="option1"
+        value="{{option}}"
+        [checked]="true"
+        (change)="onSelecting($event.target.value)"
+      />{{option}}
+    </div>
+    <button class="prev" *ngIf="i>0" (click)="onPrev()">prev</button>
+    <button class="next" (click)="onNext()">next</button>
+  </div>
+  
+  <ng-template #showLoveYou>
+    <div class="score">
+      <h3>Score : {{this.score}}</h3>
+    </div>
+  </ng-template>
+   -->
+
+<div *ngFor="let quiz of quizQuestions"><p>{{ quiz | json }}</p></div>

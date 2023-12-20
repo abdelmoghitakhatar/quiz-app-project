@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "question": "what is my favorite color ?",
+    "options": [
+      {
+        "id": 1,
+        "option": "green"
+      },
+      {
+        "id": 2,
+        "option": "gray"
+      },
+      {
+        "id": 3,
+        "option": "black"
+      },
+      {
+        "id": 4,
+        "option": "blue"
+      }
+    ],
+    "answer": 3
+  },
+  {
+    "id": 2,
+    "question": "what is food i don't eat ?",
+    "options": [
+      {
+        "id": 1,
+        "option": "msemen"
+      },
+      {
+        "id": 2,
+        "option": "couscous"
+      },
+      {
+        "id": 3,
+        "option": "rfisa"
+      },
+      {
+        "id": 4,
+        "option": "bissara"
+      }
+    ],
+    "answer": 4
+  }
+]

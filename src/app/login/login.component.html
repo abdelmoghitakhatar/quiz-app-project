@@ -1,0 +1,42 @@
+<div class="body" [style]="{'background-color': backgroundColor}">
+<div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-glass text-white" style="border-radius: 1rem;">
+          <div class="card-body p-5">
+
+            <form (ngSubmit)="loginPlayer()">
+              <h2 class="fw-bold mb-2 text-capitalize text-center">weclome 🤍</h2>
+              <p class="text-white-50 mb-5 text-center p-text">Please enter your name and birthday!</p>
+
+              <div class="form-outline form-white mb-4">
+                <label class="form-label text-capitalize text-start" for="firstName">first name</label>
+                <input type="text" id="firstName" name="firstName" class="form-control form-control-lg text-center" placeholder="First Name" [(ngModel)]="login.firstName"/>
+              </div>
+
+              <div class="form-outline form-white mb-4">
+                <label class="form-label text-capitalize" for="lastName">last name</label>
+                <input type="text" id="lastName" name="lastName" class="form-control form-control-lg text-center" placeholder="Last Name" [(ngModel)]="login.lastName" />
+              </div>
+
+              <div class="form-outline form-white mb-4">
+                <label class="form-label text-capitalize" for="birthday">birthday</label>
+                <input type="date" id="birthday" name="birthday" class="form-control form-control-lg text-center"  [(ngModel)]="loginDate"/>
+              </div>
+              <div class="text-center">
+                <button class="btn btn-outline-light btn-lg px-5 text-capitalize bg-glass" type="submit">start</button>
+              </div>
+              <div class="d-flex justify-content-center text-center mt-4 pt-1">
+                <a href="https://www.facebook.com/abdelmoghitakhatar/" target="_blank" class="text-white"><i class="bi bi-facebook fa-lg mx-2 px-2"></i></a>
+                <a href="https://www.twitter.com/abdelmoghitakha/" target="_blank" class="text-white"><i class="bi bi-twitter fa-lg mx-2 px-2"></i></a>
+                <a href="https://www.instagram.com/abdelmoghitakhatar/" target="_blank" class="text-white"><i class="bi bi-instagram fa-lg mx-2 px-2"></i></a>
+                <a href="https://www.linkedin.com/in/abdelmoghitakhatar/" target="_blank" class="text-white"><i class="bi bi-linkedin fa-lg mx-2 px-2"></i></a>
+                <a href="https://github.com/abdelmoghitakhatar/" target="_blank" class="text-white"><i class="bi bi-github fa-lg mx-2 px-2"></i></a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

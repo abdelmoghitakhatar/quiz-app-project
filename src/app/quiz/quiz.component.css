@@ -1,0 +1,41 @@
+.question-box {
+    /* align-items: center; */
+    flex-direction: column;
+    height: 100%;
+    padding: 25px;
+  }
+  
+  .options {
+    margin-top: 10px;
+  }
+  
+  input {
+    margin-right: 5px;
+  }
+  
+  .prev,
+  .next {
+    margin-top: 10px;
+    padding: 6px 8px;
+    background-color: indigo;
+    color: #fff;
+    border: none;
+    border-radius: 0.5em;
+  }
+  
+  .prev {
+    margin-right: 10px;
+  }
+  
+  .score {
+    background-color: lavender;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h3 {
+    margin: 10px 0;
+  }
+  

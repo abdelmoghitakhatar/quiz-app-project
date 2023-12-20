@@ -1,0 +1,15 @@
+.body {
+   background: url("/assets/1702308482217.jpg") center no-repeat;
+}
+
+.bg-glass {
+   backdrop-filter: blur(10px);
+   background: rgba(183, 183, 183, 0.2);
+}
+
+.dialog {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   margin-top: 40px;
+}
