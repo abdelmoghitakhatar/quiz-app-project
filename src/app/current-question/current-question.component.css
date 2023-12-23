@@ -1,0 +1,14 @@
+.questions {
+    font-family: Arial, sans-serif;
+    background-color: #624132;
+}
+
+.construction-message {
+    background-color: #a38577;
+}
+
+h1 {
+    font-size: 36px;
+    color: pink;
+    text-shadow: red 0px 0px 5px;
+}

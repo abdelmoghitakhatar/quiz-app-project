@@ -1,25 +1,20 @@
-<!-- <div *ngIf="question!=null; else showLoveYou" class="question-box">
-    <h3>Question {{i+1}}/{{totalQuestions}}</h3>
-    <h3>{{question.question}}</h3>
-    <div class="options" *ngFor="let option of question.options">
-      <input
-        type="radio"
-        name="options"
-        id="option1"
-        value="{{option}}"
-        [checked]="true"
-        (change)="onSelecting($event.target.value)"
-      />{{option}}
+<div class="container">
+  <div class="p-3">
+    <div class="btn-toolbar row" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="col">
+          <div class="btn-group container-fluid" role="group" aria-label="First group">
+            <button disabled class="btn border text-light"
+              [ngClass]="{'text-black bg-light' : questionId===currentQuestionId+1}"
+              *ngFor="let questionId of displayedQuestions()">
+              {{ questionId }}
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-    <button class="prev" *ngIf="i>0" (click)="onPrev()">prev</button>
-    <button class="next" (click)="onNext()">next</button>
   </div>
-  
-  <ng-template #showLoveYou>
-    <div class="score">
-      <h3>Score : {{this.score}}</h3>
-    </div>
-  </ng-template>
-   -->
-
-<div *ngFor="let quiz of quizQuestions"><p>{{ quiz | json }}</p></div>
+<app-current-question 
+  *ngIf="quizQuestions" 
+  (answerEmitter)="nextQuestion($event)"
+  [question]="quizQuestions.at(currentQuestionId)!"
+></app-current-question>

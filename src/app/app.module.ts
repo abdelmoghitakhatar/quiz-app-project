@@ -11,8 +11,8 @@ import { AppComponent } from './app.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { QuizComponent } from './quiz/quiz.component';
+import { CurrentQuestionComponent } from './current-question/current-question.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { QuizComponent } from './quiz/quiz.component';
     HomeComponent,
     QuizComponent,
     GalleryComponent,
-    PageNotFoundComponent
+    CurrentQuestionComponent
   ],
   imports: [
     BrowserModule,

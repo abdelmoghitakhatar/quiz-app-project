@@ -1,14 +1,14 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { QuizModel } from "./quiz-model";
+import { QuizModel, Results } from "./quiz-model";
 
 @Injectable({
     providedIn: "root"
 })
 export class QuizService {
 
-    private QA!: QuizModel;
+    private quizReults!: Results[];
 
     constructor(
         private http: HttpClient
@@ -16,5 +16,13 @@ export class QuizService {
 
     getQuestionsAndAnswers(): Observable<QuizModel[]>{
         return this.http.get<QuizModel[]>('/assets/questions.json');
+    }
+
+    setQuizResults(quizReults: Results[]):void{
+        this.quizReults = quizReults ;
+    }
+
+    getQuizResults(): Results[]{
+        return this.quizReults;
     }
 }

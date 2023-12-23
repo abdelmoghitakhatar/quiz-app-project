@@ -31,6 +31,9 @@ export class LoginComponent implements OnInit {
       }
     });
 
+    this.loginService.setAuthorization(false);
+    this.loginService.setOthersAuthorization(false);
+
     document.body.style.backgroundColor = this.backgroundColor;
   }
 
