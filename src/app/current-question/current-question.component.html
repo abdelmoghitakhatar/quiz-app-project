@@ -1,28 +1,19 @@
-<div class="questions m-2 text-center">
-    <div class="container ">
-      <div class="p-3 back rounded" style="background-color: #896661;">
-        <div class="container construction-message rounded p-3">
-          <div class="card p-3 bg-dark">
-            <h1>{{ currentQuestion.question | titlecase }}</h1>
-          </div>
-        </div>
-        <hr>
-        <div class="p-3">
-          <div class="construction-message rounded text-center row row-cols-2">
-            <div *ngFor="let option of currentQuestion.options" class="col p-3 d-grid">
-              <button 
-                [disabled]="questionsAnswered" 
-                (click)="emitAnswer(option.id)" 
-                class="btn btn-light p-3"
-                [ngClass]="{
+<div class="container construction-message rounded p-3">
+  <div class="card p-3 bg-dark">
+    <h1 class="my-5">{{ currentQuestion.question | titlecase }}</h1>
+  </div>
+</div>
+<hr>
+<div class="construction-message rounded p-3">
+  <div class="text-center row row-cols-2">
+    <div *ngFor="let option of currentQuestion.options" class="col p-3 d-grid">
+      <button [disabled]="questionsAnswered" (click)="emitAnswer(option.id)" class="btn btn-light fw-bold py-5 px-4"
+        [ngClass]="{
                   'bg-danger': questionsAnswered && option.id === selectedAnswer && !correctAnswerClass,
                   'bg-success': questionsAnswered && option.id === currentQuestion.answer
                   }">
-                  {{option.option | titlecase}}
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+        {{option.option | titlecase}}
+      </button>
     </div>
   </div>
+</div>
