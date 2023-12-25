@@ -1,32 +1,34 @@
-<div class="row p-3">
-  <div class="col"></div>
-  <div class="col-4 p-3">
-    <img class="img-fluid img-black" src="/assets/AKHATAR.png" alt="I Love You">
+<div class="container-fluid">
+  <div class="row p-3">
+    <div class="col"></div>
+    <div class="col-4 p-3">
+      <img class="img-fluid img-black" src="/assets/AKHATAR.png" alt="I Love You">
+    </div>
+    <div class="col"></div>
+    <div class="col-4 p-3">
+      <img class="img-fluid img-black" src="/assets/SA-ABHR.png" alt="I Love You">
+    </div>
+    <div class="col"></div>
   </div>
-  <div class="col"></div>
-  <div class="col-4 p-3">
-    <img class="img-fluid img-black" src="/assets/SA-ABHR.png" alt="I Love You">
-  </div>
-  <div class="col"></div>
-</div>
-<div class="questions m-2 text-center">
-  <div class="container ">
-    <div class="p-3 back rounded" style="background-color: #896661;">
-      <app-current-question *ngIf="quizQuestions" (answerEmitter)="nextQuestion($event)"
-        [question]="quizQuestions.at(currentQuestionId)!"></app-current-question>
+  <div class="questions m-2 text-center">
+    <div class="container ">
+      <div class="p-3 back rounded" style="background-color: #896661;">
+        <app-current-question *ngIf="quizQuestions" (answerEmitter)="nextQuestion($event)"
+          [question]="quizQuestions.at(currentQuestionId)!"></app-current-question>
+      </div>
     </div>
   </div>
-</div>
-<div class="container">
-  <div class="p-3">
-    <div class="btn-toolbar row" role="toolbar" aria-label="Toolbar with button groups">
-      <div class="col">
-        <div class="btn-group container-fluid" role="group" aria-label="First group">
-          <button disabled class="btn border text-light"
-            [ngClass]="{'text-black bg-light' : questionId===currentQuestionId+1}"
-            *ngFor="let questionId of displayedQuestions()">
-            {{ questionId }}
-          </button>
+  <div class="container">
+    <div class="p-3">
+      <div class="btn-toolbar row" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="col">
+          <div class="btn-group container-fluid" role="group" aria-label="First group">
+            <button disabled class="btn border text-light"
+              [ngClass]="{'text-black bg-light' : questionId===currentQuestionId+1}"
+              *ngFor="let questionId of displayedQuestions()">
+              {{ questionId }}
+            </button>
+          </div>
         </div>
       </div>
     </div>
