@@ -17,7 +17,7 @@ export class GuardService implements CanActivate {
     // alert('you are not selma')
 
     if(!this.auth.getAuthorization()){
-      this.router.navigate(['/'])
+      this.router.navigate([''])
       alert('you are not selma')
     }
 

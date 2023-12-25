@@ -1,0 +1,26 @@
+<div class="container m-auto">
+    <div class="back">
+        <div class="love-0"></div>
+        <div class="love"></div>
+        <div class="love-1"></div>
+        <div class="love-2"></div>
+        <div class="container-fluid text-center love-text">
+            <p class="txt-shadow">I Love You</p>
+            <label>🌸</label>
+            <span>S</span>
+            <span>A</span>
+            <span>L</span>
+            <span>M</span>
+            <span>A</span>
+            <label>🌸</label>
+        </div>
+    </div>
+</div>
+<div class="position-absolute text-black exit-button">
+    <div class="exit">
+        <button [hidden]="hideButton" class="btn btn-outline-danger" (click)="exit()">Exit</button>
+    </div>
+    <div class="counter">
+        <h2 [hidden]="!hideButton">{{counter}}</h2>
+    </div>
+</div>

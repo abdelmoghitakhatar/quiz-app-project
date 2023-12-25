@@ -1,15 +1,9 @@
 .body {
    background: url("/assets/ASHR.jpg") center no-repeat;
+   font-family: Roboto, "Helvetica Neue", sans-serif; 
 }
 
 .bg-glass {
    backdrop-filter: blur(7px);
    background: rgba(183, 183, 183, 0.2);
-}
-
-.dialog {
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   margin-top: 40px;
 }

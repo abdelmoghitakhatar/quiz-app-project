@@ -17,7 +17,7 @@ export class GuardOthersService implements CanActivate {
     // alert('you are not selma')
 
     if(!this.auth.getOthersAuthorization()){
-      this.router.navigate(['/'])
+      this.router.navigate([''])
       alert('Please set your login information')
     }
     return this.auth.getOthersAuthorization();

@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { CurrentQuestionComponent } from './current-question/current-question.component';
+import { ILoveYouComponent } from './i-love-you/i-love-you.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CurrentQuestionComponent } from './current-question/current-question.co
     HomeComponent,
     QuizComponent,
     GalleryComponent,
-    CurrentQuestionComponent
+    CurrentQuestionComponent,
+    ILoveYouComponent
   ],
   imports: [
     BrowserModule,
