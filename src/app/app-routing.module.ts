@@ -1,7 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { GuardOthersService } from "./app-guard-others.service";
-import { GuardService } from "./app-guard.service";
 import { GalleryComponent } from "./gallery/gallery.component";
 import { HomeComponent } from "./home/home.component";
 import { ILoveYouComponent } from "./i-love-you/i-love-you.component";
@@ -12,10 +11,12 @@ import { ResultatsComponent } from "./resultats/resultats.component";
 const routes: Routes= [
     {path: '', component: LoginComponent},
     {path: 'home', component: HomeComponent, canActivate:[GuardOthersService]},
-    {path: 'quiz', component: QuizComponent, canActivate:[GuardService]},
-    {path: 'gallery', component: GalleryComponent},
-    {path: 'i-love-you', component: ILoveYouComponent},
-    {path: 'resultats', component: ResultatsComponent},
+    // TODO : adapt guard for quiz, gallery, results and iLoveYou 
+    // {path: 'quiz', component: QuizComponent, canActivate:[GuardService]},
+    {path: 'quiz', component: QuizComponent, canActivate:[GuardOthersService]},
+    {path: 'gallery', component: GalleryComponent, canActivate:[GuardOthersService]},
+    {path: 'i-love-you', component: ILoveYouComponent, canActivate:[GuardOthersService]},
+    {path: 'resultats', component: ResultatsComponent, canActivate:[GuardOthersService]},
     {path:'**', redirectTo: ''}
 ];
 

@@ -14,11 +14,9 @@ export class GuardService implements CanActivate {
 
   canActivate(): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
     
-    // alert('you are not selma')
-
     if(!this.auth.getAuthorization()){
       this.router.navigate([''])
-      alert('you are not selma')
+      alert('you are not her')
     }
 
 
