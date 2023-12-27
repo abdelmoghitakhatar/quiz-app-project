@@ -8,12 +8,13 @@ import { GuardOthersService } from './app-guard-others.service';
 import { GuardService } from './app-guard.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CurrentQuestionComponent } from './current-question/current-question.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { HomeComponent } from './home/home.component';
+import { ILoveYouComponent } from './i-love-you/i-love-you.component';
 import { LoginComponent } from './login/login.component';
 import { QuizComponent } from './quiz/quiz.component';
-import { CurrentQuestionComponent } from './current-question/current-question.component';
-import { ILoveYouComponent } from './i-love-you/i-love-you.component';
+import { ResultatsComponent } from './resultats/resultats.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ILoveYouComponent } from './i-love-you/i-love-you.component';
     QuizComponent,
     GalleryComponent,
     CurrentQuestionComponent,
-    ILoveYouComponent
+    ILoveYouComponent,
+    ResultatsComponent
   ],
   imports: [
     BrowserModule,

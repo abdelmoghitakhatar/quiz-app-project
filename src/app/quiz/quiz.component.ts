@@ -26,6 +26,7 @@ export class QuizComponent implements OnInit {
     this.quizService.getQuestionsAndAnswers()
       .subscribe(quizQuestions => {
         this.quizQuestions = quizQuestions;
+        this.quizService.setQuizQuestions(quizQuestions);
         this.quizReults = [];
       });
 
@@ -35,7 +36,7 @@ export class QuizComponent implements OnInit {
   nextQuestion(quizReult: Results) {
       this.quizReults.push(quizReult);
     if (this.currentQuestionId + 1 === this.quizQuestions.length) {
-      this.router.navigateByUrl('gallery');
+      this.router.navigateByUrl('resultats');
       this.quizService.setQuizResults(this.quizReults)
     } else {
       this.currentQuestionId++;

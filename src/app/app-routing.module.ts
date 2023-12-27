@@ -6,6 +6,7 @@ import { HomeComponent } from "./home/home.component";
 import { ILoveYouComponent } from "./i-love-you/i-love-you.component";
 import { LoginComponent } from "./login/login.component";
 import { QuizComponent } from "./quiz/quiz.component";
+import { ResultatsComponent } from "./resultats/resultats.component";
 
 const routes: Routes= [
     {path: '', component: LoginComponent},
@@ -13,6 +14,7 @@ const routes: Routes= [
     {path: 'quiz', component: QuizComponent},
     {path: 'gallery', component: GalleryComponent},
     {path: 'i-love-you', component: ILoveYouComponent},
+    {path: 'resultats', component: ResultatsComponent},
     {path:'**', redirectTo: ''}
 ];
 

@@ -9,6 +9,7 @@ import { QuizModel, Results } from "./quiz-model";
 export class QuizService {
 
     private quizReults!: Results[];
+    private quizQuestions!: QuizModel[];
 
     constructor(
         private http: HttpClient
@@ -24,5 +25,13 @@ export class QuizService {
 
     getQuizResults(): Results[]{
         return this.quizReults;
+    }
+
+    setQuizQuestions(quizQuestions: QuizModel[]):void{
+        this.quizQuestions = quizQuestions ;
+    }
+
+    getQuizQuestions(): QuizModel[]{
+        return this.quizQuestions;
     }
 }

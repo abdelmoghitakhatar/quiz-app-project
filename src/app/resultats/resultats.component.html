@@ -1,0 +1,29 @@
+<div class="container-fluid p-3 sticky-top score">
+    <div class="card p-3 Score-border">
+        <div class="p-3 text-white bg-dark">
+            <div class="text-center row align-items-center">
+                <div class="col-6"><h3 class="m-auto">Your Score : </h3></div>
+                <div class="col-3"><h3 class="m-auto">{{ score.totalCorrectAnswers }} / {{ score.totalQuestions }}</h3></div>
+                <div class="col-3"><button class="btn text-white border-white btn-dark btn-outline-secondary" (click)="nextPage()">next</button></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container py-3">
+    <div class="card p-3 my-2" *ngFor="let question of questions; let i = index">
+        <div class="card-header p-3 text-white d-wrap bg-danger text-center">
+            <h2>{{ question.question }}</h2>
+        </div>
+        <div *ngIf="resultats" class="card-footer p-3 Score-body">
+            <p *ngFor="let option of question.options"
+            [ngClass]="{
+                'bg-danger': option.id === resultats.at(i)?.selectedAnswer && option.id !== question.answer,
+                'bg-success': option.id === question.answer
+                }"
+                class="rounded p-3"
+                >
+                {{ option.option }}
+            </p>
+        </div>
+    </div>
+</div>
