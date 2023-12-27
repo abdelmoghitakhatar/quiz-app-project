@@ -44,7 +44,9 @@ export class LoginComponent implements OnInit {
       this.router.navigateByUrl('quiz');
     }else{
       this.loginService.setOthersAuthorization(true);
-      this.router.navigateByUrl('home');
+      // TODO :adapte the router for others
+      // this.router.navigateByUrl('home');
+      this.router.navigateByUrl('quiz');
     }
   }
 
