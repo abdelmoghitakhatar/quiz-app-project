@@ -11,7 +11,7 @@
 </div>
 <div class="container py-3">
     <div class="card p-3 my-2" *ngFor="let question of questions; let i = index">
-        <div class="card-header p-3 text-white d-wrap bg-danger text-center">
+        <div class="card-header p-3 text-white d-wrap bg-secondary text-center">
             <h2>{{ question.question }}</h2>
         </div>
         <div *ngIf="resultats" class="card-footer p-3 Score-body">
