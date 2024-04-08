@@ -1,117 +1,232 @@
 [
   {
     "id": 1,
-    "question": "question 1 ?",
+    "question": "1 + 1 ?",
     "options": [
       {
         "id": 1,
-        "option": "option 1"
+        "option": "1"
       },
       {
         "id": 2,
-        "option": "option 2"
+        "option": "-1"
       },
       {
         "id": 3,
-        "option": "option 3"
+        "option": "3"
       },
       {
         "id": 4,
-        "option": "option 4"
-      }
-    ],
-    "answer": 3
-  },
-  {
-    "id": 2,
-    "question": "question 2 ?",
-    "options": [
-      {
-        "id": 1,
-        "option": "option 1"
-      },
-      {
-        "id": 2,
-        "option": "option 2"
-      },
-      {
-        "id": 3,
-        "option": "option 3"
-      },
-      {
-        "id": 4,
-        "option": "option 4"
+        "option": "2"
       }
     ],
     "answer": 4
   },
   {
-    "id": 3,
-    "question": "question 3 ?",
+    "id": 2,
+    "question": "3 + 2 x 5 ?",
     "options": [
       {
         "id": 1,
-        "option": "option 1"
+        "option": "5"
       },
       {
         "id": 2,
-        "option": "option 2"
+        "option": "10"
       },
       {
         "id": 3,
-        "option": "option 3"
+        "option": "13"
       },
       {
         "id": 4,
-        "option": "option 4"
+        "option": "9"
+      }
+    ],
+    "answer": 3
+  },
+  {
+    "id": 3,
+    "question": "2 x 2 x 0 - 1 ?",
+    "options": [
+      {
+        "id": 1,
+        "option": "3"
+      },
+      {
+        "id": 2,
+        "option": "-4"
+      },
+      {
+        "id": 3,
+        "option": "0"
+      },
+      {
+        "id": 4,
+        "option": "-1"
       }
     ],
     "answer": 4
   },
   {
     "id": 4,
-    "question": "question 4 ?",
+    "question": "11 x (5 - 4) ?",
     "options": [
       {
         "id": 1,
-        "option": "option 1"
+        "option": "11"
       },
       {
         "id": 2,
-        "option": "option 2"
+        "option": "22"
       },
       {
         "id": 3,
-        "option": "option 3"
+        "option": "33"
       },
       {
         "id": 4,
-        "option": "option 4"
+        "option": "0"
+      }
+    ],
+    "answer": 1
+  },
+  {
+    "id": 5,
+    "question": "10 / 2 - 3 x 2 ?",
+    "options": [
+      {
+        "id": 1,
+        "option": "4"
+      },
+      {
+        "id": 2,
+        "option": "-1"
+      },
+      {
+        "id": 3,
+        "option": "-5"
+      },
+      {
+        "id": 4,
+        "option": "-20"
       }
     ],
     "answer": 2
   },
   {
-    "id": 5,
-    "question": "question 5 ?",
+    "id": 6,
+    "question": "13 x 13 - 13 / 13 ?",
     "options": [
       {
         "id": 1,
-        "option": "option 1"
+        "option": "1"
       },
       {
         "id": 2,
-        "option": "option 2"
+        "option": "13.9"
       },
       {
         "id": 3,
-        "option": "option 3"
+        "option": "169"
       },
       {
         "id": 4,
-        "option": "option 4"
+        "option": "168"
       }
     ],
     "answer": 4
+  },
+  {
+    "id": 7,
+    "question": "2² + 3² ?",
+    "options": [
+      {
+        "id": 1,
+        "option": "25"
+      },
+      {
+        "id": 2,
+        "option": "13"
+      },
+      {
+        "id": 3,
+        "option": "16"
+      },
+      {
+        "id": 4,
+        "option": "10"
+      }
+    ],
+    "answer": 2
+  },
+  {
+    "id": 8,
+    "question": "(2 + 3)² ?",
+    "options": [
+      {
+        "id": 1,
+        "option": "25"
+      },
+      {
+        "id": 2,
+        "option": "15"
+      },
+      {
+        "id": 3,
+        "option": "10"
+      },
+      {
+        "id": 4,
+        "option": "18"
+      }
+    ],
+    "answer": 1
+  },
+  {
+    "id": 9,
+    "question": "4² - 6 x 2 ?",
+    "options": [
+      {
+        "id": 1,
+        "option": "-24"
+      },
+      {
+        "id": 2,
+        "option": "24"
+      },
+      {
+        "id": 3,
+        "option": "4"
+      },
+      {
+        "id": 4,
+        "option": "2"
+      }
+    ],
+    "answer": 3
+  },
+  {
+    "id": 10,
+    "question": "((5)²)² ?",
+    "options": [
+      {
+        "id": 1,
+        "option": "125"
+      },
+      {
+        "id": 2,
+        "option": "625"
+      },
+      {
+        "id": 3,
+        "option": "400"
+      },
+      {
+        "id": 4,
+        "option": "720"
+      }
+    ],
+    "answer": 2
   }
 ]

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
-import { LoginModel } from './login.module';
+import { LoginModel } from './login.model';
 import { LoginService } from './login.service';
 
 @Component({
@@ -12,53 +13,24 @@ export class LoginComponent implements OnInit {
 
   protected readonly backgroundColor : string = 'black'
 
-  myLove!: LoginModel ;
-
-  login : LoginModel = new LoginModel('', '', new Date()) ;
-  loginDate!: string;
+  login : LoginModel = new LoginModel('', '');
+  readonly noticeMessage: string = 'This is a test version for practice' 
 
   constructor(
     private router : Router,
     private loginService : LoginService,
-    ){}
+    private titleService : Title
+    ){
+    this.titleService.setTitle(this.router.routerState.snapshot.root.firstChild?.data['title']);}
     
   ngOnInit(): void {
-    this.loginService.loginData().subscribe(data => {
-      this.myLove = {
-        firstName: data.firstName,
-        lastName: data.lastName,
-        birthday: new Date(data.birthday)
-      }
-    });
-
-    this.loginService.setAuthorization(false);
     this.loginService.setOthersAuthorization(false);
-
     document.body.style.backgroundColor = this.backgroundColor;
   }
 
   loginPlayer(){
-    this.login.birthday = new Date(this.loginDate);
-    if(this.isMyLove(this.login)){
-      this.loginService.setAuthorization(this.isMyLove(this.login));
-      this.router.navigateByUrl('quiz');
-    }else{
-      this.loginService.setOthersAuthorization(true);
-      // TODO :adapte the router for others
-      // this.router.navigateByUrl('home');
-      this.router.navigateByUrl('quiz');
-    }
-  }
-
-  // loginPlayer(){
-
-  // }
-
-  isMyLove(login: LoginModel): boolean{
-    return(
-      login.lastName.toLowerCase() === this.myLove.lastName && 
-      login.firstName.toLowerCase() === this.myLove.firstName &&
-      login.birthday.valueOf() === this.myLove.birthday.valueOf()
-      )
+    this.loginService.setOthersAuthorization(this.login.firstName!=='' && this.login.lastName!=='');
+    this.loginService.setLoginInformation(this.login)
+    this.router.navigateByUrl('quiz');
   }
 }

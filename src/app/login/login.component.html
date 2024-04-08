@@ -6,8 +6,8 @@
           <div class="card-body p-5">
 
             <form (ngSubmit)="loginPlayer()">
-              <h2 class="fw-bold mb-2 text-capitalize text-center">weclome 🤍</h2>
-              <p class="text-white-50 mb-5 text-center p-text">Please enter your name and birthday!</p>
+              <h2 class="fw-bold mb-2 text-capitalize text-center">weclome 👋</h2>
+              <p class="text-white-50 mb-5 text-center p-text">Please enter your first name and last name !</p>
 
               <div class="form-outline form-white mb-4">
                 <label class="form-label text-capitalize text-start" for="firstName">first name</label>
@@ -20,8 +20,8 @@
               </div>
 
               <div class="form-outline form-white mb-4">
-                <label class="form-label text-capitalize" for="birthday">birthday</label>
-                <input type="date" id="birthday" name="birthday" class="form-control form-control-lg text-center"  [(ngModel)]="loginDate"/>
+                <label class="form-label text-capitalize" for="birthday">Notice</label>
+                <p type="text" id="birthday" name="birthday" class="form-control bg-dark form-control-lg text-center text-white-50" style="user-select: none;">{{ noticeMessage }}</p>
               </div>
               <div class="text-center">
                 <button class="btn btn-outline-light btn-lg px-5 text-capitalize bg-glass" type="submit">start</button>

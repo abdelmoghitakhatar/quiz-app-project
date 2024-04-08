@@ -15,4 +15,5 @@ h1 {
 
 .txt-family {
     font-family: cursive;
+    user-select: none;
 }

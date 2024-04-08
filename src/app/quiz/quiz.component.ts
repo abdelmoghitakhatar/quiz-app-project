@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { QuizModel, Results } from './quiz-model';
 import { QuizService } from './quiz.service';
@@ -18,10 +19,13 @@ export class QuizComponent implements OnInit {
 
   constructor(
     private quizService: QuizService,
-    private router: Router
-  ) { }
+    private router: Router,
+    private titleService : Title
+  ) { 
+    this.titleService.setTitle(this.router.routerState.snapshot.root.firstChild?.data['title']);}
 
   ngOnInit(): void {
+    document.body.style.backgroundColor = this.backgroundColor;
 
     this.quizService.getQuestionsAndAnswers()
       .subscribe(quizQuestions => {
@@ -29,8 +33,6 @@ export class QuizComponent implements OnInit {
         this.quizService.setQuizQuestions(quizQuestions);
         this.quizReults = [];
       });
-
-    document.body.style.backgroundColor = this.backgroundColor;
   }
 
   nextQuestion(quizReult: Results) {

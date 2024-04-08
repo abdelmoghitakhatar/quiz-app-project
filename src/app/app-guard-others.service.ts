@@ -14,11 +14,9 @@ export class GuardOthersService implements CanActivate {
 
   canActivate(): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
     
-    // alert('you are not selma')
-
     if(!this.auth.getOthersAuthorization()){
       this.router.navigate([''])
-      alert('Please set your login information')
+      alert('Please set your login information !')
     }
     return this.auth.getOthersAuthorization();
   }
