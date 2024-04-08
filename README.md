@@ -8,7 +8,7 @@ To get started with quiz and modifying the source code, follow these steps:
 2. Install the required dependencies using npm.
 3. Run the application locally using the Angular CLI.
 4. Start taking quizzes and practice your angular skills!
-###### or 
+#### or 
 You can easily visit the application by navigating to https://my-quiztest.netlify.app/
 
 ## Technologies Used
